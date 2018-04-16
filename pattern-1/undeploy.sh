@@ -35,7 +35,7 @@ kubectl delete -f integrator-service.yaml
 
 # databases
 echoBold 'Un-deploying WSO2 Integrator Databases...'
-kubectl delete -f mysql-deployment.yaml
+kubectl delete -f mysql-service-endpoint.yaml
 kubectl delete -f mysql-service.yaml
 
 # configuration maps

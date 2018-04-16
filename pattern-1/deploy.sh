@@ -32,8 +32,9 @@ kubectl create configmap integrator-conf-datasources --from-file=conf/integrator
 # mysql
 echoBold 'Deploying WSO2 Integrator Databases...'
 kubectl create -f mysql-service.yaml
-kubectl create -f mysql-deployment.yaml
-sleep 10s
+kubectl create -f mysql-service-endpoint.yaml
+#kubectl create -f mysql-deployment.yaml
+sleep 20s
 
 # integrator
 echoBold 'Deploying WSO2 Integrator...'

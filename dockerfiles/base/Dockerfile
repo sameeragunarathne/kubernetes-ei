@@ -40,7 +40,11 @@ ARG JAVA_HOME=${USER_HOME}/java
 # install required packages
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-    curl && \
+    curl \
+    netcat \
+    telnet \
+    iproute2 \
+    inetutils-traceroute && \
     rm -rf /var/lib/apt/lists/*
 
 # create a user group and a user

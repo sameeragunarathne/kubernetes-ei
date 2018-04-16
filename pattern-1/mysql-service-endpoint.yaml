@@ -12,10 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+kind: Endpoints
 apiVersion: v1
-kind: Service
 metadata:
   name: wso2ei-pattern1-mysql-service
-spec:
-  ports:
-  - port: 3306
+subsets:
+  - addresses:
+      - ip: 192.168.99.1
+    ports:
+      - port: 3306
