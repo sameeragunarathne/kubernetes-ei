@@ -20,7 +20,7 @@ in order to run the steps provided<br>in the following quick start guide.<br><br
 >In the context of this document, `KUBERNETES_HOME` will refer to a local copy of the [`wso2/kubernetes-ei`](https://github.com/wso2/kubernetes-ei/)
 Git repository.<br>
 
-##### 1. Checkout Kubernetes Resources for WSO2 Enterprise Integrator Git repository:
+##### 1. Clone the Kubernetes Resources for WSO2 Enterprise Integrator Git repository:
 
 ```
 git clone https://github.com/wso2/kubernetes-ei.git
@@ -35,7 +35,8 @@ please refer the official documentation, [NGINX Ingress Controller Installation 
 
 ##### 3. Setup a Network File System (NFS) to be used as the persistent volume for artifact sharing across Enterprise Integrator server instances.
 
-Update the NFS server IP (`NFS_SERVER_IP`) and export path (`NFS_LOCATION_PATH`) of persistent volume resources,
+Update the NFS server IP (`NFS_SERVER_IP`) and export path (`NFS_LOCATION_PATH`) of the following persistent volume resources
+defined in the `<KUBERNETES_HOME>/integrator-broker-analytics/volumes/persistent-volumes.yaml` file.
 
 * `integrator-broker-analytics-ei-integrator-shared-deployment-pv`
 * `integrator-broker-analytics-ei-integrator-shared-tenants-pv`
@@ -45,15 +46,23 @@ Update the NFS server IP (`NFS_SERVER_IP`) and export path (`NFS_LOCATION_PATH`)
 * `integrator-broker-analytics-ei-analytics-pv-1`
 * `integrator-broker-analytics-ei-analytics-pv-2`
 
-in `<KUBERNETES_HOME>/integrator-broker-analytics/volumes/persistent-volumes.yaml` file.
-
-Create a user named `wso2carbon` with user id `802` and a group named `wso2` with group id `802` in the NFS node.
+Create a Linux system user account named `wso2carbon` with user id `802` and a system group named `wso2` with group id `802` in the NFS node.
 Add `wso2carbon` user to the group `wso2`.
 
-Then, provide ownership of the exported folder `NFS_LOCATION_PATH` (used for artifact sharing) to `wso2carbon` user and `wso2` group.
-And provide read-write-executable permissions to owning `wso2carbon` user, for the folder `NFS_LOCATION_PATH`.
+```
+groupadd --system -g 802 wso2
+useradd --system -g 802 -u 802 wso2carbon
+```
 
-##### 4. Setup and configure external product database(s):
+Then, grant ownership of the exported folder `NFS_LOCATION_PATH` (used for artifact sharing) to `wso2carbon` user and `wso2` group.
+And grant read-write-execute permissions to owning `wso2carbon` user, for the folder `NFS_LOCATION_PATH`.
+
+```
+sudo chown -R wso2carbon:wso2 NFS_LOCATION_PATH
+chmod -R 700 NFS_LOCATION_PATH
+```
+
+##### 4. Setup product database(s):
 
 For **evaluation purposes**,
 
