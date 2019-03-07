@@ -13,18 +13,17 @@
 # limitations under the License.
 
 apiVersion: v1
-kind: Service
+kind: PersistentVolume
 metadata:
-  name: wso2ei-scalable-integrator-gateway-service
+  name: wso2ei-scalable-integrator-mysql-pv
+  labels:
+    purpose: wso2ei-scalable-integrator-rdbms-data
 spec:
-  selector:
-    deployment: wso2ei-scalable-integrator
-  ports:
-  - name: pass-through-http
-    port: 8280
-    targetPort: 8280
-    protocol: TCP
-  - name: pass-through-https
-    port: 8243
-    targetPort: 8243
-    protocol: TCP
+  capacity:
+    storage: 20Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    server: <NFS_SERVER_IP>
+    path: "<NFS_LOCATION_PATH>"
