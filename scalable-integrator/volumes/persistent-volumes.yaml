@@ -27,3 +27,21 @@ spec:
   nfs:
     server: <NFS_SERVER_IP>
     path: "<NFS_LOCATION_PATH>"
+
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: scalable-integrator-artifact-persistent-volume
+  labels:
+    purpose: wso2ei-scalable-integrator-artifacts
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    server: <NFS_SERVER_IP>
+    path: "<NFS_LOCATION_PATH>"

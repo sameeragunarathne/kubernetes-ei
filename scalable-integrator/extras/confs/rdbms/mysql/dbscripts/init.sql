@@ -26,6 +26,10 @@ GRANT ALL ON WSO2_REGISTRY_DB.* TO 'wso2carbon'@'%' IDENTIFIED BY 'wso2carbon';
 
 USE WSO2_USER_DB;
 
+-- ################################
+-- USER MANAGER TABLES
+-- ################################
+
 CREATE TABLE UM_TENANT (
 			UM_ID INTEGER NOT NULL AUTO_INCREMENT,
 	        UM_DOMAIN_NAME VARCHAR(255) NOT NULL,

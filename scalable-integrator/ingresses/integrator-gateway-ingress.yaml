@@ -22,12 +22,12 @@ metadata:
 spec:
   tls:
   - hosts:
-    - wso2ei-scalable-integrator-gateway
+    - gateway.integrator.wso2.com
   rules:
-  - host: wso2ei-scalable-integrator-gateway
+  - host: gateway.integrator.wso2.com
     http:
       paths:
       - path: /
         backend:
-          serviceName: wso2ei-scalable-integrator-gateway-service
+          serviceName: wso2ei-scalable-integrator-service
           servicePort: 8243

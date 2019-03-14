@@ -81,12 +81,11 @@ ${KUBECTL} create configmap integrator-conf --from-file=../confs/
 ${KUBECTL} create configmap integrator-conf-axis2 --from-file=../confs/axis2/
 ${KUBECTL} create configmap integrator-conf-datasources --from-file=../confs/datasources/
 
-# create MySQL initialization script ConfigMap
-${KUBECTL} create configmap mysql-dbscripts --from-file=../extras/confs/rdbms/mysql/dbscripts/
+## create MySQL initialization script ConfigMap
+#${KUBECTL} create configmap mysql-dbscripts --from-file=../extras/confs/rdbms/mysql/dbscripts/
 
 echoBold 'Creating Kubernetes Services...'
 ${KUBECTL} create -f ../integrator-service.yaml
-${KUBECTL} create -f ../integrator-gateway-service.yaml
 
 echoBold 'Creating Kubernetes Ingresses...'
 ${KUBECTL} create -f ../ingresses/integrator-gateway-ingress.yaml
@@ -94,17 +93,17 @@ ${KUBECTL} create -f ../ingresses/integrator-ingress.yaml
 
 echoBold 'Deploying Kubernetes Persistent Volumes...'
 ${KUBECTL} create -f ../volumes/persistent-volumes.yaml
-${KUBECTL} create -f ../extras/rdbms/volumes/persistent-volumes.yaml
+#${KUBECTL} create -f ../extras/rdbms/volumes/persistent-volumes.yaml
 
-# MySQL
-echoBold 'Deploying the databases...'
-${KUBECTL} create -f ../extras/rdbms/mysql/mysql-persistent-volume-claim.yaml
-${KUBECTL} create -f ../extras/rdbms/mysql/mysql-deployment.yaml
-${KUBECTL} create -f ../extras/rdbms/mysql/mysql-service.yaml
-sleep 30s
+## MySQL
+#echoBold 'Deploying the databases...'
+#${KUBECTL} create -f ../extras/rdbms/mysql/mysql-persistent-volume-claim.yaml
+#${KUBECTL} create -f ../extras/rdbms/mysql/mysql-deployment.yaml
+#${KUBECTL} create -f ../extras/rdbms/mysql/mysql-service.yaml
+#sleep 30s
 
 echoBold 'Creating the Kubernetes Deployment...'
-${KUBECTL} create -f ../integrator-volume-claim.yaml
+${KUBECTL} create -f ../integrator-volume-claims.yaml
 ${KUBECTL} create -f ../integrator-deployment.yaml
 
 echoBold 'Finished'
