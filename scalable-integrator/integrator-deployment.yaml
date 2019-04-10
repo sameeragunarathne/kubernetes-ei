@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
       - name: wso2ei-integrator
-        image: docker.wso2.com/wso2ei-integrator:6.4.0.2.1552320994578-pre-release
+        image: 549615285520.dkr.ecr.eu-central-1.amazonaws.com/wso2ei:6.4.0.2.1552320994578-pre-release
         imagePullPolicy: Always
         livenessProbe:
           exec:
@@ -85,14 +85,14 @@ spec:
         - name: integrator-conf-axis2
           mountPath: /home/wso2carbon/wso2-config-volume/conf/axis2
         - name: integrator-conf-datasources
-          mountPath: /home/wso2carbon/wso2-config-volume/conf/datasources
+          mountPathPath: /home/wso2carbon/wso2-config-volume/conf/datasources
         - name: integrator-shared-pd
-          mountPath: /home/wso2carbon/wso2ei-6.4.0/repository/deployment/server
+          mountPath: /home/wso2carbon/wso2ei-6.4.0/repository/deployment/server/carbonapps
         - name: integrator-artifact-pd
           mountPath: /home/wso2carbon/wso2-artifact-volume
       serviceAccountName: "wso2svc-account"
-      imagePullSecrets:
-      - name: wso2creds
+#      imagePullSecrets:
+#      - name: wso2creds
       volumes:
       - name: integrator-conf
         configMap:
@@ -105,7 +105,7 @@ spec:
           name: integrator-conf-datasources
       - name: integrator-shared-pd
         persistentVolumeClaim:
-          claimName: wso2ei-scalable-integrator-shared-volume-claim
+          claimName: wso2ei-scalable-integrator-shared-carapps-volume-claim
       - name: integrator-artifact-pd
         persistentVolumeClaim:
           claimName: wso2ei-scalable-integrator-artifact-volume-claim

@@ -1,0 +1,55 @@
+<datasources-configuration xmlns:svns="http://org.wso2.securevault/configuration">
+    <providers>
+        <provider>org.wso2.carbon.ndatasource.rdbms.RDBMSDataSourceReader</provider>
+    </providers>
+    <datasources>
+        <datasource>
+            <name>WSO2_ESB_DB</name>
+            <description>The datasource used for esb config registry</description>
+            <jndiConfig>
+                <name>jdbc/dev_dbESBConfig</name>
+            </jndiConfig>
+            <definition type="RDBMS">
+                <configuration>
+                    <url>jdbc:mysql://eu-cg-devhrds-cluster.cluster-c3tizvodsd5h.eu-central-1.rds.amazonaws.com:3306/dev_dbESBConfig?autoReconnect=true&amp;maxReconnects=25</url>
+                    <username>DBUser</username>
+                    <password>vx9CRTR3f7Ww</password>
+                    <driverClassName>com.mysql.jdbc.Driver</driverClassName>
+                    <maxActive>200</maxActive>
+                    <maxWait>360000</maxWait>
+                    <testOnBorrow>true</testOnBorrow>
+                    <validationQuery>SELECT 1</validationQuery>
+                    <validationInterval>30000</validationInterval>
+                    <minIdle>5</minIdle>
+                    <removeAbandoned>true</removeAbandoned>
+                    <logAbandoned>true</logAbandoned>
+                    <removeAbandonedTimeout>180</removeAbandonedTimeout>
+                </configuration>
+            </definition>
+        </datasource>
+        <datasource>
+            <name>CGDB</name>
+            <description>The datasource used for CG configs (oauth etc.)</description>
+            <jndiConfig>
+                <name>jdbc/CGDB</name>
+            </jndiConfig>
+            <definition type="RDBMS">
+                <configuration>
+                    <url>jdbc:mysql://eu-cg-devhrds-cluster.cluster-c3tizvodsd5h.eu-central-1.rds.amazonaws.com:3306/dev_cpp?autoReconnect=true&amp;maxReconnects=25</url>
+                    <username>DBUser</username>
+                    <password>vx9CRTR3f7Ww</password>
+                    <driverClassName>com.mysql.jdbc.Driver</driverClassName>
+                    <maxActive>200</maxActive>
+                    <maxWait>360000</maxWait>
+                    <testOnBorrow>true</testOnBorrow>
+                    <validationQuery>SELECT 1</validationQuery>
+                    <validationInterval>30000</validationInterval>
+                    <minIdle>5</minIdle>
+                    <removeAbandoned>true</removeAbandoned>
+                    <logAbandoned>true</logAbandoned>
+                    <removeAbandonedTimeout>180</removeAbandonedTimeout>
+                </configuration>
+            </definition>
+        </datasource>
+    </datasources>
+</datasources-configuration>

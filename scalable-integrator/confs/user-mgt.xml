@@ -50,12 +50,12 @@
             <Property name="PasswordJavaRegExViolationErrorMsg">Password length should be within 5 to 30 characters</Property>
             <Property name="RolenameJavaRegEx">^[\S]{3,30}$</Property>
             <Property name="RolenameJavaScriptRegEx">^[\S]{3,30}$</Property>
-            <Property name="CaseInsensitiveUsername">true</Property>
+            <!--<Property name="CaseInsensitiveUsername">true</Property>-->
             <Property name="SCIMEnabled">false</Property>
             <Property name="IsBulkImportSupported">true</Property>
             <Property name="PasswordDigest">SHA-256</Property>
             <Property name="StoreSaltedPassword">true</Property>
-            <Property name="MultiAttributeSeparator">,</Property>
+            <!--<Property name="MultiAttributeSeparator">,</Property>-->
             <Property name="MaxUserNameListLength">100</Property>
             <Property name="MaxRoleNameListLength">100</Property>
             <Property name="UserRolesCacheEnabled">true</Property>

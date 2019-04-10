@@ -17,7 +17,7 @@ kind: PersistentVolume
 metadata:
   name: scalable-integrator-shared-persistent-volume
   labels:
-    purpose: wso2ei-scalable-integrator-shared-artifacts
+    purpose: wso2ei-scalable-integrator-shared-carapps-artifacts
 spec:
   capacity:
     storage: 1Gi
@@ -25,8 +25,8 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: <NFS_SERVER_IP>
-    path: "<NFS_LOCATION_PATH>"
+    server: fs-d0bbd989.efs.eu-central-1.amazonaws.com
+    path: "/"
 
 ---
 
@@ -43,5 +43,5 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: <NFS_SERVER_IP>
-    path: "<NFS_LOCATION_PATH>"
+    server: fs-acbddff5.efs.eu-central-1.amazonaws.com
+    path: "/"

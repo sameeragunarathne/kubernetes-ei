@@ -25,9 +25,9 @@ metadata:
 spec:
   tls:
   - hosts:
-    - integrator.wso2.com
+    - integrator.verifone.com
   rules:
-  - host: integrator.wso2.com
+  - host: integrator.verifone.com
     http:
       paths:
       - path: /
