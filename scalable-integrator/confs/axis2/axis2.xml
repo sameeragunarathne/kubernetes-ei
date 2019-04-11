@@ -448,7 +448,7 @@
         <!-- Starting Verifone Custom Configurations-->
         <parameter name="dynamicSSLProfilesConfig">
             <!--<filePath>repository/deployment/server/senderprofiles.xml</filePath>-->
-            <filePath>repository/conf/senderprofiles.xml</filePath>
+            <filePath>conf/senderprofiles.xml</filePath>
             <fileReadInterval>60000</fileReadInterval>
         </parameter>
         <!--
