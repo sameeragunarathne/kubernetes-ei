@@ -25,7 +25,7 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: fs-d0bbd989.efs.eu-central-1.amazonaws.com
+    server: fs-acbddff5.efs.eu-central-1.amazonaws.com
     path: "/"
 
 ---
@@ -43,5 +43,5 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: fs-acbddff5.efs.eu-central-1.amazonaws.com
+    server: fs-d0bbd989.efs.eu-central-1.amazonaws.com
     path: "/"

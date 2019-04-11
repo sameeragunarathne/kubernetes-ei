@@ -30,7 +30,7 @@ ${KUBECTL} delete namespace wso2
 # persistent storage
 echoBold 'Deleting persistent storage...'
 ${KUBECTL} delete -f ../volumes/persistent-volumes.yaml
-${KUBECTL} delete -f ../extras/rdbms/volumes/persistent-volumes.yaml
+#${KUBECTL} delete -f ../extras/rdbms/volumes/persistent-volumes.yaml
 sleep 50s
 
 # switch the context to default namespace
