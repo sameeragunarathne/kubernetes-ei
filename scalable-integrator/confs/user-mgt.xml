@@ -21,7 +21,7 @@
             <AdminRole>admin</AdminRole>
             <AdminUser>
                 <UserName>admin</UserName>
-                <Password>admin</Password>
+                <Password>TQ2TOxNgZ9ufw1bF</Password>
             </AdminUser>
             <EveryOneRoleName>everyone</EveryOneRoleName> <!-- By default users in this role sees the registry root -->
             <Property name="isCascadeDeleteEnabled">true</Property>
