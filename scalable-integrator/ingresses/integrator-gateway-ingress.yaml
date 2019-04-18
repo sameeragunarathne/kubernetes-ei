@@ -30,4 +30,4 @@ spec:
       - path: /
         backend:
           serviceName: wso2ei-scalable-integrator-service
-          servicePort: 8243
+          servicePort: 8280
