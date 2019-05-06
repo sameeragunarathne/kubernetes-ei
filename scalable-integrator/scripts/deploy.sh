@@ -80,6 +80,9 @@ echoBold 'Creating Kubernetes ConfigMaps...'
 ${KUBECTL} create configmap integrator-conf --from-file=../confs/
 ${KUBECTL} create configmap integrator-conf-axis2 --from-file=../confs/axis2/
 ${KUBECTL} create configmap integrator-conf-datasources --from-file=../confs/datasources/
+${KUBECTL} create configmap integrator-custom-entitlemenmt-config --from-file=../entitlement-artifacts/entitlement-config
+${KUBECTL} create configmap integrator-custom-entitlemenmt-policy --from-file=../entitlement-artifacts/entitlement-policy
+
 
 ## create MySQL initialization script ConfigMap
 #${KUBECTL} create configmap mysql-dbscripts --from-file=../extras/confs/rdbms/mysql/dbscripts/

@@ -90,6 +90,10 @@ spec:
           mountPath: /home/wso2carbon/wso2ei-6.4.0/repository/deployment/server/carbonapps
         - name: integrator-artifact-pd
           mountPath: /home/wso2carbon/wso2-artifact-volume
+        - name: integrator-custom-entitlemenmt-policy
+          mountPath: /home/wso2carbon/entitlemenmt-artifact/entitlement-policy
+        - name: integrator-custom-entitlemenmt-config
+          mountPath: /home/wso2carbon/entitlemenmt-artifact/entitlement-config
       serviceAccountName: "wso2svc-account"
 #      imagePullSecrets:
 #      - name: wso2creds
@@ -97,6 +101,9 @@ spec:
       - name: integrator-conf
         configMap:
           name: integrator-conf
+      - name: ntegrator-custom-entitlemenmt-artifacts
+        configMap:
+          name: ntegrator-custom-entitlemenmt-artifacts
       - name: integrator-conf-axis2
         configMap:
           name: integrator-conf-axis2
