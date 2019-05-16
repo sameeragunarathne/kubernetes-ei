@@ -110,6 +110,12 @@ spec:
       - name: integrator-conf-datasources
         configMap:
           name: integrator-conf-datasources
+      - name: integrator-custom-entitlemenmt-policy
+        configMap:
+          name: integrator-custom-entitlemenmt-policy
+      - name: integrator-custom-entitlemenmt-config
+        configMap:
+          name: integrator-custom-entitlemenmt-config
       - name: integrator-shared-pd
         persistentVolumeClaim:
           claimName: wso2ei-scalable-integrator-shared-carapps-volume-claim
