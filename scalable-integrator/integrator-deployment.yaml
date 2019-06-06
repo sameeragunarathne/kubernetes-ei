@@ -128,7 +128,7 @@ spec:
           claimName: wso2ei-scalable-integrator-shared-configuration-volume-claim
       - name: integrator-shared-jks-pd
         persistentVolumeClaim:
-          claimName: wso2ei-scalable-integrator-shared-keystore-volume-claim
+          claimName: wso2ei-scalable-integrator-keystore-volume-claim
       - name: integrator-artifact-pd
         persistentVolumeClaim:
           claimName: wso2ei-scalable-integrator-artifact-volume-claim

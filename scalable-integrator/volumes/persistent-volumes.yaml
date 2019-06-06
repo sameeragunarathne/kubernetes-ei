@@ -53,7 +53,7 @@ kind: PersistentVolume
 metadata:
   name: scalable-integrator-configuration-persistent-volume
   labels:
-    purpose: wso2ei-scalable-integrator-configuration
+    purpose: wso2ei-scalable-integrator-shared-configuration
 spec:
   capacity:
     storage: 1Gi
