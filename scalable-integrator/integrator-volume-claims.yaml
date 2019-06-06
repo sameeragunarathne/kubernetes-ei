@@ -77,3 +77,20 @@ spec:
   selector:
     matchLabels:
       purpose: wso2ei-scalable-integrator-keystore
+
+---
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: wso2ei-scalable-integrator-logs-volume-claim
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: ""
+  selector:
+    matchLabels:
+      purpose: wso2ei-scalable-integrator-logs

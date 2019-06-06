@@ -81,3 +81,20 @@ spec:
   nfs:
     server: fs-c187c198.efs.eu-central-1.amazonaws.com
     path: "/jks/"
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: scalable-integrator-logs-persistent-volume
+  labels:
+    purpose: wso2ei-scalable-integrator-logs
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    server: fs-c187c198.efs.eu-central-1.amazonaws.com
+    path: "/logs/"
