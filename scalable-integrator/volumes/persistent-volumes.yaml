@@ -61,7 +61,7 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: fs-4a7c3b13.efs.eu-central-1.amazonaws.com
+    server: fs-c187c198.efs.eu-central-1.amazonaws.com
     path: "/config/"
 
 ---
@@ -79,5 +79,5 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: fs-4a7c3b13.efs.eu-central-1.amazonaws.com
+    server: fs-c187c198.efs.eu-central-1.amazonaws.com
     path: "/jks/"
