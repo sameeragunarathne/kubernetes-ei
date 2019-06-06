@@ -43,3 +43,37 @@ spec:
   selector:
     matchLabels:
       purpose: wso2ei-scalable-integrator-artifacts
+
+---
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: wso2ei-scalable-integrator-configuration-volume-claim
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: ""
+  selector:
+    matchLabels:
+      purpose: wso2ei-scalable-integrator-configuration
+
+---
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: wso2ei-scalable-integrator-keystore-volume-claim
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: ""
+  selector:
+    matchLabels:
+      purpose: wso2ei-scalable-integrator-keystore

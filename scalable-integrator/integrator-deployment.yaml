@@ -88,6 +88,10 @@ spec:
           mountPath: /home/wso2carbon/wso2-config-volume/conf/datasources
         - name: integrator-shared-pd
           mountPath: /home/wso2carbon/wso2ei-6.4.0/repository/deployment/server/carbonapps
+        - name: integrator-shared-jks-pd
+          mountPath: /home/wso2carbon/wso2ei-6.4.0/repository/resources/security
+        - name: integrator-shared-conf-pd
+          mountPath: /home/wso2carbon/wso2ei-6.4.0/verifone
         - name: integrator-artifact-pd
           mountPath: /home/wso2carbon/wso2-artifact-volume
         - name: integrator-custom-entitlemenmt-policy
@@ -101,9 +105,9 @@ spec:
       - name: integrator-conf
         configMap:
           name: integrator-conf
-      - name: ntegrator-custom-entitlemenmt-artifacts
-        configMap:
-          name: ntegrator-custom-entitlemenmt-artifacts
+#      - name: integrator-custom-entitlemenmt-artifacts
+#        configMap:
+#          name: integrator-custom-entitlemenmt-artifacts
       - name: integrator-conf-axis2
         configMap:
           name: integrator-conf-axis2
@@ -119,6 +123,12 @@ spec:
       - name: integrator-shared-pd
         persistentVolumeClaim:
           claimName: wso2ei-scalable-integrator-shared-carapps-volume-claim
+      - name: integrator-shared-conf-pd
+        persistentVolumeClaim:
+          claimName: wso2ei-scalable-integrator-shared-configuration-volume-claim
+      - name: integrator-shared-jks-pd
+        persistentVolumeClaim:
+          claimName: wso2ei-scalable-integrator-shared-keystore-volume-claim
       - name: integrator-artifact-pd
         persistentVolumeClaim:
           claimName: wso2ei-scalable-integrator-artifact-volume-claim

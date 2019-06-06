@@ -45,3 +45,39 @@ spec:
   nfs:
     server: fs-d0bbd989.efs.eu-central-1.amazonaws.com
     path: "/"
+
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: scalable-integrator-configuration-persistent-volume
+  labels:
+    purpose: wso2ei-scalable-integrator-configuration
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    server: fs-4a7c3b13.efs.eu-central-1.amazonaws.com
+    path: "/config/"
+
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: scalable-integrator-keystore-persistent-volume
+  labels:
+    purpose: wso2ei-scalable-integrator-keystore
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    server: fs-4a7c3b13.efs.eu-central-1.amazonaws.com
+    path: "/jks/"
