@@ -77,6 +77,7 @@ ${KUBECTL} config set-context $(${KUBECTL} config current-context) --namespace=w
 ${KUBECTL} create -f ../../rbac/rbac.yaml
 
 echoBold 'Creating Kubernetes ConfigMaps...'
+${KUBECTL} create configmap integrator-bin --from-file=../bin/
 ${KUBECTL} create configmap integrator-conf --from-file=../confs/
 ${KUBECTL} create configmap integrator-conf-axis2 --from-file=../confs/axis2/
 ${KUBECTL} create configmap integrator-conf-datasources --from-file=../confs/datasources/

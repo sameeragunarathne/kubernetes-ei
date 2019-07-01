@@ -99,6 +99,8 @@ spec:
         volumeMounts:
         - name: integrator-conf
           mountPath: /home/wso2carbon/wso2-config-volume/conf
+        - name: integrator-bin
+          mountPath: /home/wso2carbon/wso2-config-volume/bin
         - name: integrator-conf-axis2
           mountPath: /home/wso2carbon/wso2-config-volume/conf/axis2
         - name: integrator-conf-datasources
@@ -132,6 +134,9 @@ spec:
       - name: integrator-conf-axis2
         configMap:
           name: integrator-conf-axis2
+      - name: integrator-bin
+        configMap:
+          name: integrator-bin
       - name: integrator-conf-datasources
         configMap:
           name: integrator-conf-datasources
