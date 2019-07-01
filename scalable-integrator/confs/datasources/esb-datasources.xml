@@ -11,7 +11,7 @@
             </jndiConfig>
             <definition type="RDBMS">
                 <configuration>
-                    <url>jdbc:mysql://eu-cg-devhrds-cluster.cluster-c3tizvodsd5h.eu-central-1.rds.amazonaws.com:3306/dev_dbESBConfig?autoReconnect=true&amp;maxReconnects=25</url>
+                    <url>jdbc:mysql://eu-dev-cgard.c3tizvodsd5h.eu-central-1.rds.amazonaws.com:3306/dev_wso2ei_dbESBConfig_kube?autoReconnect=true&amp;maxReconnects=25</url>
                     <username>DBUser</username>
                     <password>vx9CRTR3f7Ww</password>
                     <driverClassName>com.mysql.jdbc.Driver</driverClassName>
@@ -35,7 +35,7 @@
             </jndiConfig>
             <definition type="RDBMS">
                 <configuration>
-                    <url>jdbc:mysql://eu-cg-devhrds-cluster.cluster-c3tizvodsd5h.eu-central-1.rds.amazonaws.com:3306/dev_cpp?autoReconnect=true&amp;maxReconnects=25</url>
+                    <url>jdbc:mysql://eu-dev-cgard.c3tizvodsd5h.eu-central-1.rds.amazonaws.com:3306/dev_wso2ei_cpp_kube?autoReconnect=true&amp;maxReconnects=25</url>
                     <username>DBUser</username>
                     <password>vx9CRTR3f7Ww</password>
                     <driverClassName>com.mysql.jdbc.Driver</driverClassName>
