@@ -35,6 +35,23 @@ spec:
       - name: wso2ei-integrator
         image: 549615285520.dkr.ecr.eu-central-1.amazonaws.com/wso2ei:6.4.0.2.1552320994578-pre-release
         imagePullPolicy: Always
+        env:
+          - name: MY_NODE_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: spec.nodeName
+          - name: MY_POD_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.name
+          - name: MY_POD_NAMESPACE
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.namespace
+          - name: MY_POD_IP
+            valueFrom:
+              fieldRef:
+                fieldPath: status.podIP
         livenessProbe:
           exec:
             command:
@@ -92,6 +109,8 @@ spec:
           mountPath: /home/wso2carbon/wso2ei-6.4.0/repository/resources/security
         - name: integrator-shared-logs-pd
           mountPath: /var/log/verifone
+        - name: integrator-shared-carbon-logs-pd
+          mountPath: /home/wso2carbon/wso2ei-6.4.0/repository/logs/
         - name: integrator-shared-conf-pd
           mountPath: /home/wso2carbon/wso2ei-6.4.0/verifone
         - name: integrator-artifact-pd
@@ -134,6 +153,9 @@ spec:
       - name: integrator-shared-logs-pd
         persistentVolumeClaim:
           claimName: wso2ei-scalable-integrator-logs-volume-claim
+      - name: integrator-shared-carbon-logs-pd
+        persistentVolumeClaim:
+          claimName: wso2ei-scalable-integrator-carbon-logs-volume-claim
       - name: integrator-artifact-pd
         persistentVolumeClaim:
           claimName: wso2ei-scalable-integrator-artifact-volume-claim
