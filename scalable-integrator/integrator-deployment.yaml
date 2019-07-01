@@ -121,6 +121,9 @@ spec:
           mountPath: /home/wso2carbon/entitlemenmt-artifacts/entitlement-policy
         - name: integrator-custom-entitlemenmt-config
           mountPath: /home/wso2carbon/entitlemenmt-artifacts/entitlement-config
+        - name: wso2ei-logs
+          mountPath: /var/logs/verifone
+
       serviceAccountName: "wso2svc-account"
 #      imagePullSecrets:
 #      - name: wso2creds
@@ -164,3 +167,6 @@ spec:
       - name: integrator-artifact-pd
         persistentVolumeClaim:
           claimName: wso2ei-scalable-integrator-artifact-volume-claim
+      - name: shared-midtier-optroot
+          persistentVolumeClaim:
+            claimName: wso2ei-logs-volume-claim
