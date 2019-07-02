@@ -95,19 +95,19 @@ spec:
     matchLabels:
       purpose: wso2ei-scalable-integrator-logs
 
-#---
-#
-#apiVersion: v1
-#kind: PersistentVolumeClaim
-#metadata:
-#  name: wso2ei-scalable-integrator-carbon-logs-volume-claim
-#spec:
-#  accessModes:
-#    - ReadWriteMany
-#  resources:
-#    requests:
-#      storage: 5Gi
-#  storageClassName: ""
-#  selector:
-#    matchLabels:
-#      purpose: wso2ei-scalable-integrator-carbon-logs
+---
+
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: wso2ei-scalable-integrator-carbon-logs-volume-claim
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: ""
+  selector:
+    matchLabels:
+      purpose: wso2ei-scalable-integrator-carbon-logs
