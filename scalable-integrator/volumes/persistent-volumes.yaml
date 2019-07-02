@@ -98,7 +98,23 @@ spec:
   nfs:
     server: fs-c187c198.efs.eu-central-1.amazonaws.com
     path: "/logs/"
-#---
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: scalable-integrator-carbon-logs-persistent-volume
+  labels:
+    purpose: wso2ei-scalable-integrator-carbon-logs
+spec:
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    server: 10.178.160.88
+    path: "/var/nfs/wso2ei/logs"
 #
 #apiVersion: v1
 #kind: PersistentVolume
@@ -115,3 +131,19 @@ spec:
 #  nfs:
 #    server: 10.178.160.88
 #    path: "/var/nfs/wso2ei/logs"
+#
+#apiVersion: v1
+#kind: PersistentVolumeClaim
+#metadata:
+#  name: wso2ei-logs-volume-claim
+#spec:
+#  accessModes:
+#    - ReadWriteMany
+#  resources:
+#    requests:
+#      storage: 1Gi
+#  storageClassName: ""
+#  selector:
+#    matchLabels:
+#      purpose: mount-wso2ei-logs
+#---
