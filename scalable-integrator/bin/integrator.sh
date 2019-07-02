@@ -276,19 +276,6 @@ if [ -z "$JVM_MEM_OPTS" ]; then
 fi
 echo "Using Java memory options: $JVM_MEM_OPTS"
 
-
-#======
-#VERIFONE CUSTOM
-
-getipadd = "ifconfig | grep 'inet ' | grep -v 127.0.0.1 | cut -d\  -f2"
-eval $getidadd
-dockeripaddress=$(eval $ippicker)
-echo "----------------------------------"
-echo $dockeripaddress
-echo "-------------------------------------------------------------------"
-#END OF VERIFONE CUSTOM
-#========
-
 #To monitor a Carbon server in remote JMX mode on linux host machines, set the below system property.
 #   -Djava.rmi.server.hostname="your.IP.goes.here"
 
