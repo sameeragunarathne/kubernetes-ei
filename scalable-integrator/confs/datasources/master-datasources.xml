@@ -32,12 +32,11 @@
             <name>REGISTRY_DB</name>
             <description>The datasource used for registry- config/governance</description>
             <jndiConfig>
-                <name>
-                    jdbc:mysql://eu-dev-cgard.c3tizvodsd5h.eu-central-1.rds.amazonaws.com:3306/DEV_WSO2EI_REGISTRY_DB?autoReconnect=true&amp;useSSL=false
-                </name>
+                <name>jdbc/WSO2RegistryDB</name>
             </jndiConfig>
             <definition type="RDBMS">
                 <configuration>
+                    <url>jdbc:mysql://eu-dev-cgard.c3tizvodsd5h.eu-central-1.rds.amazonaws.com:3306/DEV_WSO2EI_REGISTRY_DB?autoReconnect=true&amp;useSSL=false</url>
                     <username>DBUser</username>
                     <password>RtTwpgAK6r9Z</password>
                     <driverClassName>com.mysql.jdbc.Driver</driverClassName>
@@ -49,8 +48,7 @@
                 </configuration>
             </definition>
         </datasource>
-
-        <datasource>
+         <datasource>
             <name>WSO2_USER_DB</name>
             <description>The datasource used for registry and user manager</description>
             <jndiConfig>
@@ -58,9 +56,7 @@
             </jndiConfig>
             <definition type="RDBMS">
                 <configuration>
-                    <url>
-                        jdbc:mysql://eu-dev-cgard.c3tizvodsd5h.eu-central-1.rds.amazonaws.com:3306/DEV_WSO2EI_USERSTORE_DB?autoReconnect=true&amp;useSSL=false
-                    </url>
+                    <url>jdbc:mysql://eu-dev-cgard.c3tizvodsd5h.eu-central-1.rds.amazonaws.com:3306/DEV_WSO2EI_USERSTORE_DB?autoReconnect=true&amp;useSSL=false</url>
                     <username>DBUser</username>
                     <password>RtTwpgAK6r9Z</password>
                     <driverClassName>com.mysql.jdbc.Driver</driverClassName>
