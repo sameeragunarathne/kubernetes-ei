@@ -131,9 +131,9 @@ spec:
       - name: integrator-conf
         configMap:
           name: integrator-conf
-      - name: integrator-custom-entitlemenmt-artifacts
-        configMap:
-          name: integrator-custom-entitlemenmt-artifacts
+#      - name: integrator-custom-entitlemenmt-artifacts
+#        configMap:
+#          name: integrator-custom-entitlemenmt-artifacts
       - name: integrator-conf-axis2
         configMap:
           name: integrator-conf-axis2
