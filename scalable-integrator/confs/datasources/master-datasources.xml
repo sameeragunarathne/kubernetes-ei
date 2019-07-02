@@ -1,11 +1,11 @@
 <datasources-configuration xmlns:svns="http://org.wso2.securevault/configuration">
-  
+
     <providers>
         <provider>org.wso2.carbon.ndatasource.rdbms.RDBMSDataSourceReader</provider>
     </providers>
-  
+
     <datasources>
-      
+
         <datasource>
             <name>WSO2_CARBON_DB</name>
             <description>The datasource used for registry and user manager</description>
@@ -32,7 +32,9 @@
             <name>REGISTRY_DB</name>
             <description>The datasource used for registry- config/governance</description>
             <jndiConfig>
-                <name>jdbc:mysql://eu-dev-cgard.c3tizvodsd5h.eu-central-1.rds.amazonaws.com:3306/DEV_WSO2EI_REGISTRY_DB?autoReconnect=true&amp;useSSL=false</name>
+                <name>
+                    jdbc:mysql://eu-dev-cgard.c3tizvodsd5h.eu-central-1.rds.amazonaws.com:3306/DEV_WSO2EI_REGISTRY_DB?autoReconnect=true&amp;useSSL=false
+                </name>
             </jndiConfig>
             <definition type="RDBMS">
                 <configuration>
@@ -47,7 +49,8 @@
                 </configuration>
             </definition>
         </datasource>
-         <datasource>
+
+        <datasource>
             <name>WSO2_USER_DB</name>
             <description>The datasource used for registry and user manager</description>
             <jndiConfig>
@@ -55,7 +58,9 @@
             </jndiConfig>
             <definition type="RDBMS">
                 <configuration>
-                    <url>jdbc:mysql://eu-dev-cgard.c3tizvodsd5h.eu-central-1.rds.amazonaws.com:3306/DEV_WSO2EI_USERSTORE_DB?autoReconnect=true&amp;useSSL=false</url>
+                    <url>
+                        jdbc:mysql://eu-dev-cgard.c3tizvodsd5h.eu-central-1.rds.amazonaws.com:3306/DEV_WSO2EI_USERSTORE_DB?autoReconnect=true&amp;useSSL=false
+                    </url>
                     <username>DBUser</username>
                     <password>vx9CRTR3f7Ww</password>
                     <driverClassName>com.mysql.jdbc.Driver</driverClassName>
