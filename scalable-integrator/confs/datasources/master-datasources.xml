@@ -36,7 +36,7 @@
             </jndiConfig>
             <definition type="RDBMS">
                 <configuration>
-                    <url>jdbc:mysql://eu-dev-cgard.c3tizvodsd5h.eu-central-1.rds.amazonaws.com:3306/DEV_WSO2EI_REGISTRY_DB?autoReconnect=true&useSSL=false</url>
+                    <url>jdbc:mysql://eu-dev-cgard.c3tizvodsd5h.eu-central-1.rds.amazonaws.com:3306/DEV_WSO2EI_REGISTRY_DB?autoReconnect=true</url>
                     <username>DBUser</username>
                     <password>RtTwpgAK6r9Z</password>
                     <driverClassName>com.mysql.jdbc.Driver</driverClassName>
@@ -56,7 +56,7 @@
             </jndiConfig>
             <definition type="RDBMS">
                 <configuration>
-                    <url>jdbc:mysql://eu-dev-cgard.c3tizvodsd5h.eu-central-1.rds.amazonaws.com:3306/DEV_WSO2EI_USERSTORE_DB?autoReconnect=true&useSSL=false</url>
+                    <url>jdbc:mysql://eu-dev-cgard.c3tizvodsd5h.eu-central-1.rds.amazonaws.com:3306/DEV_WSO2EI_USERSTORE_DB?autoReconnect=true</url>
                     <username>DBUser</username>
                     <password>RtTwpgAK6r9Z</password>
                     <driverClassName>com.mysql.jdbc.Driver</driverClassName>
