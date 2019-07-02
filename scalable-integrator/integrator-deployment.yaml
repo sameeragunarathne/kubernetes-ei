@@ -167,6 +167,6 @@ spec:
       - name: integrator-artifact-pd
         persistentVolumeClaim:
           claimName: wso2ei-scalable-integrator-artifact-volume-claim
-      - name: shared-midtier-optroot
-        persistentVolumeClaim:
-          claimName: wso2ei-logs-volume-claim
+#      - name: shared-midtier-optroot
+#        persistentVolumeClaim:
+#          claimName: wso2ei-logs-volume-claim
