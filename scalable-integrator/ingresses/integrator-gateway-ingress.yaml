@@ -22,9 +22,9 @@ metadata:
 spec:
   tls:
   - hosts:
-    - esbworker.devcg.verifone.internal
+    - esbworker.testcg.verifone.internal
   rules:
-  - host: esbworker.devcg.verifone.internal
+  - host: esbworker.testcg.verifone.internal
     http:
       paths:
       - path: /

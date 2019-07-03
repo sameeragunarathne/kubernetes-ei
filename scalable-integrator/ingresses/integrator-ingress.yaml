@@ -25,9 +25,9 @@ metadata:
 spec:
   tls:
   - hosts:
-    - esb.devcg.verifone.internal
+    - esb.testcg.verifone.internal
   rules:
-  - host: esb.devcg.verifone.internal
+  - host: esb.testcg.verifone.internal
     http:
       paths:
       - path: /

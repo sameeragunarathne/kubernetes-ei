@@ -44,12 +44,12 @@
        This is will become part of the End Point Reference of the
        services deployed on this server instance.
     -->
-    <HostName>esbworker.devcg.verifone.internal</HostName>
+    <HostName>esbworker.testcg.verifone.internal</HostName>
 
     <!--
     Host name to be used for the Carbon management console
     -->
-    <MgtHostName>esb.devcg.verifone.internal</MgtHostName>
+    <MgtHostName>esb.testcg.verifone.internal</MgtHostName>
 
     <!--
         The URL of the back end server. This is where the admin services are hosted and
