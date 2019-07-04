@@ -36,9 +36,9 @@
             </jndiConfig>
             <definition type="RDBMS">
                 <configuration>
-                    <url>jdbc:mysql://eu-dev-cgard.c3tizvodsd5h.eu-central-1.rds.amazonaws.com:3306/DEV_WSO2EI_REGISTRY_DB?autoReconnect=true</url>
+                    <url>jdbc:mysql://eu-qa-cgard.c3tizvodsd5h.eu-central-1.rds.amazonaws.com:3306/TEST_WSO2EI_REGISTRY_DB?autoReconnect=true</url>
                     <username>DBUser</username>
-                    <password>RtTwpgAK6r9Z</password>
+                    <password>ZRtTK6rwpgA9</password>
                     <driverClassName>com.mysql.jdbc.Driver</driverClassName>
                     <maxActive>80</maxActive>
                     <maxWait>60000</maxWait>
@@ -56,9 +56,9 @@
             </jndiConfig>
             <definition type="RDBMS">
                 <configuration>
-                    <url>jdbc:mysql://eu-dev-cgard.c3tizvodsd5h.eu-central-1.rds.amazonaws.com:3306/DEV_WSO2EI_USERSTORE_DB?autoReconnect=true</url>
+                    <url>jdbc:mysql://eu-qa-cgard.c3tizvodsd5h.eu-central-1.rds.amazonaws.com:3306/TEST_WSO2EI_USERSTORE_DB?autoReconnect=true</url>
                     <username>DBUser</username>
-                    <password>RtTwpgAK6r9Z</password>
+                    <password>ZRtTK6rwpgA9</password>
                     <driverClassName>com.mysql.jdbc.Driver</driverClassName>
                     <maxActive>50</maxActive>
                     <maxWait>60000</maxWait>
