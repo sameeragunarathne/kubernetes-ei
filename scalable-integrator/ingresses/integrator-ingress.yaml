@@ -24,7 +24,8 @@ metadata:
     nginx.ingress.kubernetes.io/session-cookie-hash: "sha1"
 spec:
   tls:
-  - hosts:
+  - secretName:  wso2eicert
+    hosts:
     - esb.testcg.verifone.internal
   rules:
   - host: esb.testcg.verifone.internal
