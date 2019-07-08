@@ -25,8 +25,8 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: fs-acbddff5.efs.eu-central-1.amazonaws.com
-    path: "/"
+    server: 10.178.160.88
+    path: "/var/nfs/wso2ei/carapps"
 
 ---
 
@@ -43,8 +43,8 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: fs-d0bbd989.efs.eu-central-1.amazonaws.com
-    path: "/"
+    server: 10.178.160.88
+    path: "/var/nfs/wso2ei/artifacts"
 
 ---
 
@@ -61,8 +61,8 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: fs-c187c198.efs.eu-central-1.amazonaws.com
-    path: "/config/"
+    server: 10.178.160.88
+    path: "/var/nfs/wso2ei/configs"
 
 ---
 
@@ -79,8 +79,8 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: fs-c187c198.efs.eu-central-1.amazonaws.com
-    path: "/jks/"
+    server: 10.178.160.88
+    path: "/var/nfs/wso2ei/keystore"
 ---
 
 apiVersion: v1
@@ -96,8 +96,8 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: fs-c187c198.efs.eu-central-1.amazonaws.com
-    path: "/logs/"
+    server: 10.178.160.88
+    path: "/var/nfs/wso2ei/splunk"
 ---
 
 apiVersion: v1
@@ -115,35 +115,3 @@ spec:
   nfs:
     server: 10.178.160.88
     path: "/var/nfs/wso2ei/logs"
-#
-#apiVersion: v1
-#kind: PersistentVolume
-#metadata:
-#  name: scalable-integrator-carbon-logs-persistent-volume
-#  labels:
-#    purpose: wso2ei-scalable-integrator-carbon-logs
-#spec:
-#  capacity:
-#    storage: 1Gi
-#  accessModes:
-#    - ReadWriteMany
-#  persistentVolumeReclaimPolicy: Retain
-#  nfs:
-#    server: 10.178.160.88
-#    path: "/var/nfs/wso2ei/logs"
-#
-#apiVersion: v1
-#kind: PersistentVolumeClaim
-#metadata:
-#  name: wso2ei-logs-volume-claim
-#spec:
-#  accessModes:
-#    - ReadWriteMany
-#  resources:
-#    requests:
-#      storage: 1Gi
-#  storageClassName: ""
-#  selector:
-#    matchLabels:
-#      purpose: mount-wso2ei-logs
-#---
