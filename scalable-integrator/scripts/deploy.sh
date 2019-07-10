@@ -73,7 +73,7 @@ ${KUBECTL} config set-context $(${KUBECTL} config current-context) --namespace=w
 # create a Kubernetes Secret for passing WSO2 Private Docker Registry credentials
 #${KUBECTL} create secret docker-registry wso2creds --docker-server=docker.wso2.com --docker-username=${WSO2_SUBSCRIPTION_USERNAME} --docker-password=${WSO2_SUBSCRIPTION_PASSWORD} --docker-email=${WSO2_SUBSCRIPTION_USERNAME}
 #create a Kubernetes Secret for passing SSL Cert for the ingress
-${KUBECTL} create secret tls wso2eicert --key ../extras/ssl-certs/server.key --cert ../extras/ssl-certs/server.crt
+#${KUBECTL} create secret tls wso2eicert --key ../extras/ssl-certs/server.key --cert ../extras/ssl-certs/server.crt
 
 # create Kubernetes Role and Role Binding necessary for the Kubernetes API requests made from Kubernetes membership scheme
 ${KUBECTL} create -f ../../rbac/rbac.yaml
