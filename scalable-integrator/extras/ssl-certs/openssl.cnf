@@ -1,0 +1,29 @@
+[req]
+distinguished_name = req_distinguished_name
+req_extensions = v3_req
+
+[req_distinguished_name]
+countryName = US
+countryName_default = US
+stateOrProvinceName = CA
+stateOrProvinceName_default = CA
+localityName = SanJoshe
+localityName_default = SanJoshe
+organizationalUnitName = Verifone
+organizationalUnitName_default = Verifone
+commonName = *.verifone.internal
+commonName_max = 64
+
+[ v3_req ]
+# Extensions to add to a certificate request
+basicConstraints = CA:FALSE
+keyUsage = nonRepudiation, digitalSignature, keyEncipherment
+subjectAltName = @alt_names
+
+[alt_names]
+DNS.1 = *.devcg.verifone.internal
+DNS.2 = *.testcg.verifone.internal
+DNS.3 = *.staging1cg.verifone.internal
+DNS.4 = *.stagingcg.verifone.internal
+DNS.5 = *.preprodcg.verifone.internal
+DNS.6 = *.cg.verifone.internal
