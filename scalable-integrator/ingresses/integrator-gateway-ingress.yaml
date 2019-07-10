@@ -21,8 +21,7 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-passthrough: "true"
 spec:
   tls:
-  - secretName:  wso2eicert
-    hosts:
+  - hosts:
     - esbworker.devcg.verifone.internal
   rules:
   - host: esbworker.devcg.verifone.internal
