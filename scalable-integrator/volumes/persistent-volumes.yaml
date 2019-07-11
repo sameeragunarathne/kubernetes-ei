@@ -25,7 +25,7 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: 10.178.160.88
+    server: 10.178.112.67
     path: "/var/nfs/wso2ei/carapps"
 
 ---
@@ -43,7 +43,7 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: 10.178.160.88
+    server: 10.178.112.67
     path: "/var/nfs/wso2ei/artifacts"
 
 ---
@@ -61,7 +61,7 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: 10.178.160.88
+    server: 10.178.112.67
     path: "/var/nfs/wso2ei/configs"
 
 ---
@@ -79,7 +79,7 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: 10.178.160.88
+    server: 10.178.112.67
     path: "/var/nfs/wso2ei/keystore"
 ---
 
@@ -96,7 +96,7 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: 10.178.160.88
+    server: 10.178.112.67
     path: "/var/nfs/wso2ei/splunk"
 ---
 
@@ -113,5 +113,5 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   nfs:
-    server: 10.178.160.88
+    server: 10.178.112.67
     path: "/var/nfs/wso2ei/logs"
