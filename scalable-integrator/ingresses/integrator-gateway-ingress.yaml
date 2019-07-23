@@ -20,14 +20,10 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
     nginx.ingress.kubernetes.io/ssl-passthrough: "true"
 spec:
-  tls:
-  - hosts:
-    - esbworker.devcg.verifone.internal
   rules:
-  - host: esbworker.devcg.verifone.internal
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: wso2ei-scalable-integrator-service
-          servicePort: 8280
+    - http:
+        paths:
+          - path: /
+            backend:
+              serviceName: wso2ei-scalable-integrator-service
+              servicePort: 8280
