@@ -18,12 +18,12 @@ metadata:
   name: wso2ei-scalable-integrator-gateway-ingress
   annotations:
     kubernetes.io/ingress.class: "nginx"
-    nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
     - http:
         paths:
-          - path: /
+          - path: /services/verifone/
             backend:
               serviceName: wso2ei-scalable-integrator-service
               servicePort: 8280
