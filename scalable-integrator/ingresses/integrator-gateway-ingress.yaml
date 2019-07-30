@@ -21,7 +21,7 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
-    http:
+  - http:
       paths:
       - path: /services/verifone/
         backend:
